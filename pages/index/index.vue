@@ -1,11 +1,27 @@
 <template>
 	<view class="content">
-		<view class="imageGrid">
-            <text class="title">{{title}}</text>
-        </view>
-		<view class="text">
-			<wxParse :content="article"  />
-		</view>
+		<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
+			<swiper-item>
+				<view class="imageGrid">
+					<text class="title">{{title}}</text>
+				</view>
+				<view class="text">
+					<wxParse :content="article"  />
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="imageGrid">
+					<text class="title">demo</text>
+				</view>
+				<view class="text">
+					<wxParse :content="article"  />
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper-item uni-bg-blue">C</view>
+			</swiper-item>
+		</swiper>
+		
 	</view>
 </template>
 
@@ -23,7 +39,10 @@
 		data() {
 			return {
 				title: '启动前的准备...',
-				article: marked(mdcontend)
+				article: marked(mdcontend),
+				indicatorDots: false,
+				autoplay: false
+				
 			}
 		},
 		onLoad() {
@@ -39,7 +58,7 @@
 	@import url("../../components/mpvue-wxparse/src/wxParse.css");
 	.content {
 		text-align: center;
-		height: 400upx;
+		height: 1200upx;
 	}
     .logo{
         height: 200upx;
@@ -63,5 +82,8 @@
 	.text {
 		text-align: left;
 		margin:0 20upx;
+	}
+	.swiper {
+		height:100%
 	}
 </style>
