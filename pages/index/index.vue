@@ -6,15 +6,15 @@
 					<text class="title">{{title}}</text>
 				</view>
 				<view class="text">
-					<wxParse :content="article"  />
+					<wxParse :content="article00"  />
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="imageGrid">
-					<text class="title">demo</text>
+					<text class="title">设备开机</text>
 				</view>
 				<view class="text">
-					<wxParse :content="article"  />
+					<wxParse :content="article01"  />
 				</view>
 			</swiper-item>
 			<swiper-item>
@@ -29,8 +29,8 @@
 	import marked from '../../components/marked'
 	import wxParse from '../../components/mpvue-wxparse/src/wxParse.vue'
 	
-	var mdcontend = "按下列步骤检查:\r\n- 设备接入220v电源\r\n- 设备空开拨到on\r\n- 检查设备所有急停按钮是否已松开\r\n- 将启动钥匙旋至on"
-	
+	var mdcontend = "按下列步骤检查:\r\n- 设备接入220v电源\r\n- 设备空开拨到on\r\n- 检查设备所有急停按钮是否已松开\r\n- 将启动钥匙旋至on\r\n- 检查水箱水位线是否在min之上"
+	var mdcontend1 = "按下列步骤操作:\r\n- 按动开机按钮，设备开始自检开机\r\n- 设备自检完成后将触摸屏显示信息页面\r\n- 点击触摸屏控制选项卡，切换至控制界面\r\n- 选中红光指示和主光闸"
 	
 	export default {
 		components: {
@@ -39,7 +39,8 @@
 		data() {
 			return {
 				title: '启动前的准备...',
-				article: marked(mdcontend),
+				article00: marked(mdcontend),
+				article01: marked(mdcontend1),
 				indicatorDots: false,
 				autoplay: false
 				
