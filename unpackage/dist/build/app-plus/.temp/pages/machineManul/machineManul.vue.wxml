@@ -1,0 +1,28 @@
+<import src="/components/mpvue-wxparse/src/wxParse.vue.wxml" />
+<template name="5acf7adf">
+  <view class="_view data-v-c326e9a4 content">
+    <swiper class="_swiper data-v-c326e9a4 swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item class="_swiper-item data-v-c326e9a4">
+        <view class="_view data-v-c326e9a4 imageGrid">
+          <text class="_text data-v-c326e9a4 title">{{title}}</text>
+        </view>
+        <view class="_view data-v-c326e9a4 text">
+          <template data="{{...$root['0'], ...$root[$kk+'3ml-0'],$root}}" is="66b7299c"></template>
+        </view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-c326e9a4">
+        <view class="_view data-v-c326e9a4 imageGrid">
+          <text class="_text data-v-c326e9a4 title">设备开机</text>
+        </view>
+        <view class="_view data-v-c326e9a4 text">
+          <template data="{{...$root['0'], ...$root[$kk+'vYT-2'],$root}}" is="66b7299c"></template>
+        </view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-c326e9a4">
+        <view class="_view data-v-c326e9a4 swiper-item uni-bg-blue">
+          <button type="primary" bindtap="handleProxy" data-eventid="{{'51g-0'}}" data-comkey="{{$k}}" class="_button data-v-c326e9a4">改变标题栏颜色</button>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</template>

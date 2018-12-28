@@ -1,0 +1,13 @@
+<import src="/components/uni-icon.vue.wxml" />
+<template name="29a2613f">
+  <view class="_view data-v-09afef8e page">
+    <view class="_view data-v-09afef8e topBar">
+      <view class="_view data-v-09afef8e icon-item">
+        <template size="40" type="scan" color="#fff" data="{{...$root['0'], ...$root[$kk+'mHX-0'],$root}}" is="4df586ec"></template> 扫一扫 </view>
+      <view class="_view data-v-09afef8e icon-item">
+        <template size="40" type="help" color="#fff" data="{{...$root['0'], ...$root[$kk+'1fl-1'],$root}}" is="4df586ec"></template> 诊断 </view>
+      <view class="_view data-v-09afef8e icon-item">
+        <template size="40" type="gear-filled" color="#fff" data="{{...$root['0'], ...$root[$kk+'mk1-2'],$root}}" is="4df586ec"></template> 设置 </view>
+    </view>
+  </view>
+</template>

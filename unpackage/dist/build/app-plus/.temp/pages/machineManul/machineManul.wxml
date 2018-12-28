@@ -1,0 +1,1 @@
+<import src="/pages/machineManul/machineManul.vue.wxml" /><template is="5acf7adf" data="{{ ...$root['0'], $root }}"/>

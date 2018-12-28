@@ -1,0 +1,13 @@
+<import src="/components/uni-icon.vue.wxml" />
+<template name="15485576">
+  <view class="_view data-v-083f0bd4 content">
+    <view class="_view data-v-083f0bd4 topBar">
+      <view class="_view data-v-083f0bd4 icon-item">
+        <template size="40" type="scan" color="#8f8f94" index="1" data="{{...$root['0'], ...$root[$kk+'Iy5-0'],$root}}" is="4df586ec"></template>
+      </view>
+      <view class="_view data-v-083f0bd4 icon-item">
+        <template size="40" type="scan" color="#8f8f94" index="2" data="{{...$root['0'], ...$root[$kk+'Jvc-1'],$root}}" is="4df586ec"></template>
+      </view>
+    </view>
+  </view>
+</template>

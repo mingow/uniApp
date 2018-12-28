@@ -1,0 +1,23 @@
+@import "../../common/vendor.wxss";
+
+.icon-item {
+  width: 105rpx;
+  height: 105rpx;
+  margin: 30rpx;
+}
+.topBar {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  color: #fff;
+  height: 200rpx;
+  background-color: #007AFF;
+}
+.red {
+  background-color: #f33;
+  height: 300rpx;
+}

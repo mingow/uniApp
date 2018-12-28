@@ -1,65 +1,91 @@
 <template>
 	<view class="content">
-		<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
-			<swiper-item>
-				<view class="imageGrid">
-					<text class="title">{{title}}</text>
-				</view>
-				<view class="text">
-					<wxParse :content="article00"  />
-				</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="imageGrid">
-					<text class="title">设备开机</text>
-				</view>
-				<view class="text">
-					<wxParse :content="article01"  />
-				</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item uni-bg-blue">C</view>
-			</swiper-item>
-		</swiper>
-		
+		<view class="topBar">
+			<view class="icon-item">
+				<uni-icon size="40" type="scan" color="#8f8f94" index="1"></uni-icon>
+			</view>
+			<view class="icon-item">
+				<uni-icon size="40" type="scan" color="#8f8f94" index="2"></uni-icon>
+			</view>
+		</view>
 	</view>
+
 </template>
 
 <script>
-	import marked from '../../components/marked'
-	import wxParse from '../../components/mpvue-wxparse/src/wxParse.vue'
-	
-	var mdcontend = "按下列步骤检查:\r\n- 设备接入220v电源\r\n- 设备空开拨到on\r\n- 检查设备所有急停按钮是否已松开\r\n- 将启动钥匙旋至on\r\n- 检查水箱水位线是否在min之上"
-	var mdcontend1 = "按下列步骤操作:\r\n- 按动开机按钮，设备开始自检开机\r\n- 设备自检完成后将触摸屏显示信息页面\r\n- 点击触摸屏控制选项卡，切换至控制界面\r\n- 选中红光指示和主光闸"
+
+	import uniIcon from '../../components/uni-icon.vue'
 	
 	export default {
 		components: {
-			wxParse
+			uniIcon
 		},
 		data() {
 			return {
 				title: '启动前的准备...',
-				article00: marked(mdcontend),
-				article01: marked(mdcontend1),
 				indicatorDots: false,
 				autoplay: false
 				
 			}
 		},
 		onLoad() {
-
+			uni.setNavigationBarColor({
+				frontColor: "#ffffff" ,
+				backgroundColor: "#007AFF" ,
+				splitLine:null
+			})
+			uni.getSystemInfo({
+				success:function(res){
+					console.log(res.windowHeight)
+				}
+			})
 		},
 		methods: {
-
+			setBg() {
+				this.hasSetBg = !this.hasSetBg;
+				uni.setNavigationBarColor({
+					frontColor: this.hasSetBg ? "#ffffff" : "#000000",
+					backgroundColor: this.hasSetBg ? "#007AFF" : "#F8F8F8"
+				})
+			}
 		}
 	}
 </script>
 
 <style>
 	@import url("../../components/mpvue-wxparse/src/wxParse.css");
-	.content {
+	
+	.topBar {
 		text-align: center;
-		height: 1200upx;
+		height: 200upx;
+		background-color:#007AFF;
+		display: inline-flex;
+	}
+	.topBar ul {
+		text-decoration: none;
+		list-style: none;
+		color:#fff;
+		margin:0;
+		padding:0;
+	}
+	
+	.icon-item {
+		display: inline-flex;
+		width: 130upx;
+		height: 130upx;
+		margin: 20upx;
+		justify-content: center;
+	}
+	.icon-item span {
+		display: block;
+
+	}
+	.icon-item .icon {
+		width: 80upx;
+		height: 80upx;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin:auto;
 	}
     .logo{
         height: 200upx;
@@ -86,5 +112,16 @@
 	}
 	.swiper {
 		height:100%
+	}
+	.status-contents{
+		height: var(--status-bar-height);
+	}
+	.top-view{
+		width: 100%;
+		position: fixed;
+		top: 0;
+	}
+	.status{
+		height:var(--status-bar-height);
 	}
 </style>
